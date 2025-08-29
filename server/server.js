@@ -13,7 +13,9 @@ const PORT = process.env.PORT || 5001;
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-app.use(cors({ origin: 'http://localhost:3001' }));
+app.use(cors({ 
+  origin: ['http://localhost:3001', 'https://social-media-analyzer-1-83nk.onrender.com'] 
+}));
 app.use(express.json());
 
 app.post('/api/upload', upload.single('file'), async (req, res) => {
