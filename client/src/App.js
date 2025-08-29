@@ -33,7 +33,7 @@ function App() {
     const formData = new FormData();
     formData.append('file', file);
     try {
-      const apiUrl = 'https://social-media-analyzer-tntl.onrender.com/';
+      const apiUrl = 'https://social-media-analyzer-tntl.onrender.com';
       const res = await axios.post(`${apiUrl}/api/upload`, formData);
       setExtractedText(res.data.text);
     } catch (err) { setError('Failed to extract text. Please try again.'); }
@@ -44,7 +44,7 @@ function App() {
     setAnalysisLoading(true); setError(''); setSuggestions('');
     try {
       // Use your live Render URL here if deploying, or localhost for local testing
-      const apiUrl = 'https://social-media-analyzer-tntl.onrender.com/';
+      const apiUrl = 'https://social-media-analyzer-tntl.onrender.com';
       const res = await axios.post(`${apiUrl}/api/analyze`, { text: extractedText });
       setSuggestions(res.data.suggestions);
     } catch (err) { setError('Failed to get AI suggestions. Please try again.'); }
