@@ -1,5 +1,8 @@
 ## Social Media Content Analyzer
 
+**Live Demo:** \https://social-media-analyzer-1-83nk.onrender.com``
+
+
 This is a **full-stack web application** built as a technical assessment. It allows users to upload documents (PDFs and images), extract text content, and use AI to generate suggestions for improving social media engagement.
 
 ## Project Context
